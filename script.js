@@ -53,7 +53,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -67,7 +67,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -80,7 +80,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -93,7 +93,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -106,7 +106,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -119,7 +119,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -132,7 +132,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
@@ -145,7 +145,7 @@ async function getTimes() {
       const timeContainer = document.createElement("div");
       const nome = document.createElement("p");
 
-      nome.innerText = ("- " + time.Name);
+      nome.innerText = time.Name;
 
       timeContainer.appendChild(nome);
 
