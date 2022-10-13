@@ -1,5 +1,5 @@
 const url = "https://estagio.geopostenergy.com/WorldCup/GetAllTeams";
-const allTeamsContainer = document.querySelector("#all-teams-container");
+const timesContainer = document.querySelector("#times-container");
 const timesGrupoA = document.querySelector(".grupo-a");
 const timesGrupoB = document.querySelector(".grupo-b");
 const timesGrupoC = document.querySelector(".grupo-c");
@@ -10,186 +10,136 @@ const timesGrupoG = document.querySelector(".grupo-g");
 const timesGrupoH = document.querySelector(".grupo-h");
 
 
-function shuffleArray(array) {
-   array.sort(() => Math.random() - 0.5);
+function embaralharArray(times) {
+   times.sort(() => Math.random() - 0.5);
 }
 
-async function getAllTeams() {
+async function getTimes() {
 
-   const response = await fetch(url, {
+   const resposta = await fetch(url, {
       method: 'GET',
       headers: { "git-user": "elizalap" }
    });
 
-   const data = await response.json();
-   const teams = data.Result;
+   const data = await resposta.json();
+   const times = data.Result;
 
-   shuffleArray(teams);
 
-   let grupoA = (teams.slice(0, 4));
-   let grupoB = (teams.slice(4, 8));
-   let grupoC = (teams.slice(8, 12));
-   let grupoD = (teams.slice(12, 16));
-   let grupoE = (teams.slice(16, 20));
-   let grupoF = (teams.slice(20, 24));
-   let grupoG = (teams.slice(24, 28));
-   let grupoH = (teams.slice(28, 32));
+   embaralharArray(times);
 
-   grupoA.map((team) => {
+   let grupoA = (times.slice(0, 4));
+   let grupoB = (times.slice(4, 8));
+   let grupoC = (times.slice(8, 12));
+   let grupoD = (times.slice(12, 16));
+   let grupoE = (times.slice(16, 20));
+   let grupoF = (times.slice(20, 24));
+   let grupoG = (times.slice(24, 28));
+   let grupoH = (times.slice(28, 32));
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+   grupoA.map((time) => {
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      nome.innerText = time.Name;
 
-      timesGrupoA.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoA);
+      timeContainer.appendChild(nome);
+
+      timesGrupoA.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoA);
 
    });
 
-   grupoB.map((team) => {
+   grupoB.map((time) => {
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      nome.innerText = time.Name;
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      timeContainer.appendChild(nome);
 
-      timesGrupoB.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoB);
+      timesGrupoB.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoB);
    });
 
-   grupoC.map((team) => {
+   grupoC.map((time) => {
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      nome.innerText = time.Name;
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      timeContainer.appendChild(nome);
 
-      timesGrupoC.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoC);
+      timesGrupoC.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoC);
    });
 
-   const tituloA = document.createElement("h2");
-   tituloA.innerHTML = "Grupo A";
+   grupoD.map((time) => {
 
-   grupoD.map((team) => {
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      nome.innerText = time.Name;
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      timeContainer.appendChild(nome);
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
-
-      timesGrupoD.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoD);
+      timesGrupoD.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoD);
    });
 
-   grupoE.map((team) => {
+   grupoE.map((time) => {
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      nome.innerText = time.Name;
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      timeContainer.appendChild(nome);
 
-      timesGrupoE.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoE);
+      timesGrupoE.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoE);
    });
 
-   grupoF.map((team) => {
+   grupoF.map((time) => {
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      nome.innerText = time.Name;
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      timeContainer.appendChild(nome);
 
-      timesGrupoF.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoF);
+      timesGrupoF.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoF);
    });
 
-   grupoG.map((team) => {
+   grupoG.map((time) => {
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      nome.innerText = time.Name;
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      timeContainer.appendChild(nome);
 
-      timesGrupoG.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoG);
+      timesGrupoG.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoG);
    });
 
-   grupoH.map((team) => {
+   grupoH.map((time) => {
 
-      const teamContainer = document.createElement("div");
-      const name = document.createElement("h3");
-      const token = document.createElement("p");
+      const timeContainer = document.createElement("div");
+      const nome = document.createElement("h3");
 
-      name.innerText = team.Name;
-      token.innerText = team.Token;
+      nome.innerText = time.Name;
 
-      teamContainer.appendChild(name);
-      teamContainer.appendChild(token);
+      timeContainer.appendChild(nome);
 
-      timesGrupoH.appendChild(teamContainer);
-      allTeamsContainer.appendChild(timesGrupoH);
+      timesGrupoH.appendChild(timeContainer);
+      timesContainer.appendChild(timesGrupoH);
    });
-
 }
 
-// function printRandomTeams() {
-
-//    let teams = getAllTeams();
-
-//    shuffleArray(teams);
-
-//    teams.map((team) => {
-//       const div = document.createElement("div");
-//       const name = document.createElement("h3");
-//       const token = document.createElement("p");
-
-//       name.innerText = team.Name;
-//       token.innerText = team.Token;
-
-//       div.appendChild(name);
-//       div.appendChild(token);
-
-//       teamsContainer.appendChild(div);
-//    });
-
-// }
-
-getAllTeams();
-//printRandomTeams();
+getTimes();
