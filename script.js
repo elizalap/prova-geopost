@@ -13,6 +13,18 @@ const timesGrupoH = document.querySelector(".grupo-h");
 function embaralharArray(times) {
    times.sort(() => Math.random() - 0.5);
 }
+/*
+function getTimes() {
+   fetch(url, {
+      method: 'GET',
+      headers: { "git-user": "elizalap" }
+   })
+      .then(resposta => resposta.json())
+      .then(dados => {
+         console.log(dados.Result);
+      })
+}
+*/
 
 async function getTimes() {
 
@@ -39,9 +51,9 @@ async function getTimes() {
    grupoA.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -53,9 +65,9 @@ async function getTimes() {
    grupoB.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -66,9 +78,9 @@ async function getTimes() {
    grupoC.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -79,9 +91,9 @@ async function getTimes() {
    grupoD.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -92,9 +104,9 @@ async function getTimes() {
    grupoE.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -105,9 +117,9 @@ async function getTimes() {
    grupoF.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -118,9 +130,9 @@ async function getTimes() {
    grupoG.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
@@ -131,9 +143,9 @@ async function getTimes() {
    grupoH.map((time) => {
 
       const timeContainer = document.createElement("div");
-      const nome = document.createElement("h3");
+      const nome = document.createElement("p");
 
-      nome.innerText = time.Name;
+      nome.innerText = ("- " + time.Name);
 
       timeContainer.appendChild(nome);
 
