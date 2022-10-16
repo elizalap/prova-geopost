@@ -13,18 +13,7 @@ const timesGrupoH = document.querySelector(".grupo-h");
 function embaralharArray(times) {
    times.sort(() => Math.random() - 0.5);
 }
-/*
-function getTimes() {
-   fetch(url, {
-      method: 'GET',
-      headers: { "git-user": "elizalap" }
-   })
-      .then(resposta => resposta.json())
-      .then(dados => {
-         console.log(dados.Result);
-      })
-}
-*/
+
 
 async function getTimes() {
 
